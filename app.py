@@ -11,9 +11,11 @@ def index():
 @app.route("/about")
 def about():
     return render_template("about.html")
-@app.route("/details")
+@app.route("/details",methods=["GET","POST"])
 def details():
     form=Details()
+    if form.validate_on_submit():
+        flash(f'Success')
     return render_template("details.html",form=form)
 
     
