@@ -6,36 +6,50 @@
         <div class="card white darken-1 center" style="width: 300%; margin-left: -50%;" >
             <div class="card-content blue-grey-text">
                 <span class="card-title">Register</span>
-                <form method="POST" action="/check">
+                <form method="POST" action="">
+                    {{ form.hidden_tag() }}
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="first_name" type="text" class="validate" name="fname">
-                            <label for="last_name">First Name</label>
+                            {{ form.fname(class="validate") }}
+                            {{ form.fname.label() }}
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="last_name" type="text" class="validate" name="lname">
-                            <label for="last_name">Last Name</label>
+                                {{ form.lname(class="validate") }}
+                                {{ form.lname.label() }}
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                          <input id="last_name" type="text" class="validate" name="email">
-                          <label for="last_name">Email ID</label>
+                                {{ form.email(class="validate") }}
+                                {{ form.email.label() }}
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="last_name" type="text" class="validate" name="mobile">
-                            <label for="last_name">Mobile Number</label>
+                                {{ form.mobile(class="validate") }}
+                                {{ form.mobile.label() }}
                         </div>
                     </div>
-                </form>
+                    <div class="row">
+                        <div class="input-field col s12">
+                                {{ form.company(class="validate") }}
+                                {{ form.company.label() }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                                {{ form.position(class="validate") }}
+                                {{ form.position.label() }}
+                        </div>
+                    </div>
+                    <div class="row">
+                       {{ form.submit(class="btn blue-grey orange-text waves-effect waves-light") }}
+                    </div>
+                    </form>
             </div>
-            <div class="card-action  blue-grey lighten-4">
-                <a href="/check"><b>Proceed</b></a>
-            </div>
+           
         </div>
     </div>
 </div>
