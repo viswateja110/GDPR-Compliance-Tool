@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,flash
 from formmanagement import Details 
 
 
@@ -15,7 +15,7 @@ def about():
 def details():
     form=Details()
     if form.validate_on_submit():
-        flash(f'Success')
+        flash('Success')
     return render_template("details.html",form=form)
 
     
